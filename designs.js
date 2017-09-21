@@ -26,27 +26,26 @@ $('#input_width').change(function(){
 
 function makeGrid() {
 	 // get the reference for the body
-  var body = document.getElementsByTagName("body")[0];
+  let body = document.getElementsByTagName("body")[0];
  
   // creates a <table> element and a <tbody> element
-  var n = document.createElement("table");
-  var m = document.createElement("tbody");
+  let n = document.createElement("table");
+  let m = document.createElement("tbody");
  
   // creating all cells
-  for (var i = 0; i < height; i++) {
+  for (let i = 0; i < height; i++) {
     // creates a table row
-    var row = document.createElement("tr");
+    let row = document.createElement("tr");
  
-    for (var j = 0; j < width; j++) {
+    for (let j = 0; j < width; j++) {
       // Create a <td> element and a text node, make the text
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
-      var cell = document.createElement("td");
-      var cellText = document.createTextNode(" ");
+      let cell = document.createElement("td");
+      let cellText = document.createTextNode(" ");
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
- 
     // add the row to the end of the table body
     m.appendChild(row);
   }
